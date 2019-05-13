@@ -1,0 +1,89 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+
+/* styles du Slider */
+
+#slider {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    height: 35em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#slider img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#slider .next,
+#slider .previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#slider .next {
+    right: 10px;
+    background-image: url(../images/fleche.png);
+}
+
+#slider .previous {
+    left: 10px;
+    background-image: url(../images/fleche-retour.png);
+}
+
+#slider .pause-play-button {
+    position: absolute;
+    display: inline;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: rgba(64, 64, 64, 0.45);
+    padding: 5px;
+}
+
+#slider + div.slider-pannel .goto-button {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#slider + div.slider-pannel .goto-button.active {
+    color: red;
+}
+
+@media(max-width:479px) {
+    .container {
+        width: 90%;
+    }
+    #slider .next,
+    #slider .previous {
+        width: 25px;
+        height: 25px;
+    }
+    #slider + div.slider-pannel .goto-button {
+        font-size:1.2em;
+    }
+}
